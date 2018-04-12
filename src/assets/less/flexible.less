@@ -1,0 +1,37 @@
+/**
+     * 移动端自适应函数
+ */
+@base-size: 75px;
+.pxToRem(@name, @px) {
+    @{name}: @px / @base-size * 1rem;
+}
+.pxToRemTwo(@name, @px1, @px2) {
+    @{name}: @px1 / @base-size * 1rem @px2 / @base-size * 1rem;
+}
+.pxToRemThree(@name, @px1, @px2, @px3) {
+    @{name}: @px1 / @base-size * 1rem @px2 / @base-size * 1rem @px3 / @base-size * 1rem;
+}
+.pxToRemFour(@name, @px1, @px2, @px3, @px4) {
+    @{name}: @px1 / @base-size * 1rem @px2 / @base-size * 1rem @px3 / @base-size * 1rem @px4 / @base-size * 1rem;
+}
+.px2px(@name, @px) {
+    @{name}: round(@px / 2) * 1px;
+    [data-dpr="2"] & {
+        @{name}: @px * 1px;
+    }
+    // for mx3
+    [data-dpr="2.5"] & {
+        @{name}: round(@px * 2.5 / 2) * 1px;
+    }
+    // for 小米note
+    [data-dpr="2.75"] & {
+        @{name}: round(@px * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        @{name}: round(@px / 2 * 3) * 1px;
+    }
+    // for 三星note4
+    [data-dpr="4"] & {
+        @{name}: @px * 2px;
+    }
+}
