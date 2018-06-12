@@ -55,7 +55,7 @@ exports.cssLoaders = function (options) {
   }
 
   function resolveResource(name) {
-    return path.resolve(__dirname, '../src/assets/less/' + name);
+    return path.resolve(__dirname, '../src/assets/css/' + name);
   }
 
   function generateSassResourceLoader() {

@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import './assets/css/bootstrap.css'
+import './assets/js/bootstrap.js'
+// import './assets/js/KTVWeb.js'
 
 Vue.config.productionTip = false
 
